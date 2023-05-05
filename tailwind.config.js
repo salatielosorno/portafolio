@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors: {
         'spink': { DEFAULT: '#EE3EC9' },
-        'syellow': { DEFAULT: '#FFCF74' }
+        'syellow': { DEFAULT: '#FFCF74' },
+        'spurple': { DEFAULT: '#AFC2E7'}
       }
     }
   },

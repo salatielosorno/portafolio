@@ -1,11 +1,11 @@
 import '../styles/globals.css'
 import Footer from '../components/Footer'
 import Head from 'next/head'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Quicksand } from 'next/font/google'
 
-const montserrat = Montserrat({
+const quicksand = Quicksand({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-quicksand',
 })
 
 export default function MyApp({ Component, pageProps }) {
@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <title>Sofy Piñatas</title>
       </Head>
-      <main className={`${montserrat.variable} font-sans`}>
+      <main className={`${quicksand.variable} font-sans`}>
         <Component {...pageProps} />
         <Footer />
       </main>

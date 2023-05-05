@@ -12,14 +12,33 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/sofy/fonts/Quicksand-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Monserrat';
+    src: url('/sofy/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Quicksand';
+}
+
 .magz-no {
+    font-family: "Monserrat";
     font-weight: 700;
     font-style: italic;
     text-decoration: none;
 }
 
 .magz {
-    /*font-family: "Magz";*/
+    font-family: "Magz";
     font-weight: 700;
     font-style: italic;
     text-decoration: none;
@@ -31,8 +50,4 @@
 
 .magz-second {
     text-shadow: rgba(0, 0, 0, 0.325) 0px 6.6009px 28.0538px;
-}
-
-.quicksand {
-    font-family: 'Quicksand';
 }
