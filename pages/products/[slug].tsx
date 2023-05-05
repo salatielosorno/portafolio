@@ -27,6 +27,7 @@ export default function Product({ product }) {
           </div>
         </div>
       </div>
+      <div className='chat-support__icon'/>
     </div>
   )
 }

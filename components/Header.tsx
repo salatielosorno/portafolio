@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import img from '../public/sofy-pinatas-background.png'
+import img from '../public/images/sofy-pinatas-background.png'
 
 export default function Header({ scrollHandler }) {
   return (

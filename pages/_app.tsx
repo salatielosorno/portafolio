@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <main className={`${quicksand.variable} font-sans`}>
         <Component {...pageProps} />
+        <div className='chat-support__icon'/>
         <Footer />
       </main>
     </>
