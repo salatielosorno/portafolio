@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+      <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-800">
         <h3>{product.name}</h3>
         <p>${product.price}</p>
       </div>

@@ -12,7 +12,10 @@ module.exports = {
       colors: {
         'spink': { DEFAULT: '#EE3EC9' },
         'syellow': { DEFAULT: '#FFCF74' },
-        'spurple': { DEFAULT: '#AFC2E7'}
+        'spurple': { DEFAULT: '#AFC2E7'},
+        'spurple-2': { DEFAULT: '#5874AC' },
+        'sorange': { DEFAULT: '#FFB074' },
+        'sgreen': { DEFAULT: '#499F99' }
       }
     }
   },

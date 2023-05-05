@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 import Header from '../components/Header'
+import Pinatas from '../components/Pinatas'
+import Packages from '../components/Packages'
 import ProductCard from '../components/ProductCard'
 import getProducts from '../sfcc.js'
 
@@ -19,10 +21,12 @@ export default function Gallery({ data }) {
     <>
       <Header scrollHandler={scrollHandler} />
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <Pinatas />
+        <Packages />
         <div className="sm:py-15 mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p
-              className="mt-1 text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-5xl"
+              className="mt-1 text-4xl font-bold text-gray-800 sm:text-5xl sm:tracking-tight lg:text-5xl"
               ref={coffeeRef}
             >
               Hechas a mano para ti.
