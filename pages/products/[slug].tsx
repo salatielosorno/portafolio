@@ -3,7 +3,7 @@ import getProducts from '../../sfcc.js'
 
 export default function Product({ product }) {
   return (
-    <div className="flex h-screen flex-col justify-between">
+    <div className="flex flex-col justify-between">
       <div className="mx-auto mt-16 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto flex flex-col sm:flex-row">
           <Image
@@ -52,6 +52,6 @@ export async function getStaticPaths() {
 
   return {
     paths: fullPaths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }

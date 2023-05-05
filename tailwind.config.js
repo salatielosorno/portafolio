@@ -8,6 +8,12 @@ module.exports = {
     fontFamily: {
       sans: ['var(--font-montserrat)'],
     },
+    extend: {
+      colors: {
+        'spink': { DEFAULT: '#EE3EC9' },
+        'syellow': { DEFAULT: '#FFCF74' }
+      }
+    }
   },
   future: {
     hoverOnlyWhenSupported: true,

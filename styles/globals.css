@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Magz';
+    src: url('/sofy/fonts/Magz.ttf.woff') format('woff'),
+        url('/sofy/fonts/Magz.ttf.svg#Magz') format('svg'),
+        url('/sofy/fonts/Magz.ttf.eot'),
+        url('/sofy/fonts/Magz.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.magz-no {
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.magz {
+    /*font-family: "Magz";*/
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.magz-first {
+    text-shadow: rgb(0, 255, 255) -3.29057px 0px 0px, rgb(255, 0, 255) 3.29057px 0px 0px;
+}
+
+.magz-second {
+    text-shadow: rgba(0, 0, 0, 0.325) 0px 6.6009px 28.0538px;
+}
+
+.quicksand {
+    font-family: 'Quicksand';
+}

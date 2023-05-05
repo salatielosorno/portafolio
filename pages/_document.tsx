@@ -2,11 +2,11 @@ import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="es">
       <Head>
         <meta
-          name="description"
-          content="The premiere coffee delivery service."
+          name="Sofy Piñatas"
+          content="Sofy Piñatas"
         />
       </Head>
       <body>

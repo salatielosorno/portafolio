@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>The Coffee House</title>
+        <title>Sofy Piñatas</title>
       </Head>
       <main className={`${montserrat.variable} font-sans`}>
         <Component {...pageProps} />
