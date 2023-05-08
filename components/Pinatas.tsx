@@ -56,7 +56,12 @@ export default function Pinatas() {
                     <span className="text-base font-normal leading-tight text-white">24×7 phone & email support</span>
                 </li> */}
                 </ul>
-                {/* <button type="button" className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Choose package</button> */}
+                <div>
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                        href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20B%C3%A1sica."
+                        target="_blank"
+                        rel="noreferrer">Lo quiero</a>
+                </div>
             </div>
             <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
                 <h5 className="mb-4 text-xl font-medium text-white">Piñata Chica</h5>
@@ -88,6 +93,12 @@ export default function Pinatas() {
                         <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
                     </li>
                 </ul>
+                <div>
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                        href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Chica."
+                        target="_blank"
+                        rel="noreferrer">Lo quiero</a>
+                </div>
             </div>
             <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
                 <h5 className="mb-4 text-xl font-medium text-white">Piñata Mediana</h5>
@@ -119,6 +130,12 @@ export default function Pinatas() {
                         <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
                     </li>
                 </ul>
+                <div>
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                        href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Mediana."
+                        target="_blank"
+                        rel="noreferrer">Lo quiero</a>
+                </div>
             </div>
             <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
                 <h5 className="mb-4 text-xl font-medium text-white">Piñata Jumbo</h5>
@@ -150,6 +167,12 @@ export default function Pinatas() {
                         <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
                     </li>
                 </ul>
+                <div>
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                        href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Jumbo."
+                        target="_blank"
+                        rel="noreferrer">Lo quiero</a>
+                </div>
             </div>
         </div >
     </>
