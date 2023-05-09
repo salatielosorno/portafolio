@@ -15,7 +15,8 @@ module.exports = {
         'spurple': { DEFAULT: '#AFC2E7'},
         'spurple-2': { DEFAULT: '#5874AC' },
         'sorange': { DEFAULT: '#FFB074' },
-        'sgreen': { DEFAULT: '#499F99' }
+        'sgreen': { DEFAULT: '#499F99' },
+        'sblue': { DEFAULT: '#84E1D8'}
       }
     }
   },
