@@ -21,8 +21,6 @@ export default function Gallery({ data }) {
     <>
       <Header scrollHandler={scrollHandler} />
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <Pinatas />
-        <Packages />
         <div className="sm:py-15 mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p
@@ -39,6 +37,8 @@ export default function Gallery({ data }) {
               <ProductCard product={product} key={product.id} />
             ))}
         </div>
+        <Pinatas />
+        <Packages />
       </div>
     </>
   )
