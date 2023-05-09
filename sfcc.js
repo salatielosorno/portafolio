@@ -54,7 +54,7 @@ export default async function getProducts(searchQuery) {
     })
   )
   */
-  console.log('searchQuery >> ', searchQuery)
+  //console.log('searchQuery >> ', searchQuery)
   const products = [
     {
       id: '001',
@@ -218,7 +218,7 @@ export default async function getProducts(searchQuery) {
     }
   ]
 
-  console.log('searchQuery >> ', searchQuery)
+  //console.log('searchQuery >> ', searchQuery)
   if (searchQuery !== 'coffee') {
     return products.filter((item) => item.id === searchQuery);
   }
