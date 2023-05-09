@@ -47,7 +47,7 @@ export default function Packages() {
                     </li>
                 </ul>
                 <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
                         href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20paquete%201."
                         target="_blank"
                         rel="noreferrer">Lo quiero</a>
@@ -94,7 +94,7 @@ export default function Packages() {
                     </li>
                 </ul>
                 <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
                         href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20paquete%202."
                         target="_blank"
                         rel="noreferrer">Lo quiero</a>
@@ -146,7 +146,7 @@ export default function Packages() {
                     </li>
                 </ul>
                 <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
                         href="https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20el%20paquete%203."
                         target="_blank"
                         rel="noreferrer">Lo quiero</a>

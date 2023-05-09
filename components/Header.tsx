@@ -22,9 +22,9 @@ export default function Header({ scrollHandler }) {
             <h1 className="mt-1 text-center font-bold text-gray-800 sm:tracking-tight text-7xl lg:text-9xl">
               <span className='font-bold text-spink block magz magz-first'>Sofy</span> <span className='text-syellow block magz-no magz-second'>Piñatas</span>
             </h1>
-            <p className="relative left-0 right-0 mx-auto mt-5 max-w-xl text-center text-xl  font-semibold tracking-wide text-orange-600 legend--text-shadow">
-              <span className="block text-white">La vida es mejor con una</span>
-              <span className="block text-white font-medium">piñata.</span>
+            <p className="relative left-0 right-0 mx-auto mt-5 max-w-xl text-center text-xl  font-semibold tracking-wide text-orange-600">
+              <span className="block text-white legend--text-shadow">La vida es mejor con una</span>
+              <span className="block text-white font-medium legend--text-shadow">piñata.</span>
             </p>
 
            {/*  <div className="mx-auto mt-10 max-w-xs sm:flex sm:max-w-none sm:justify-center">
