@@ -31,16 +31,16 @@ body {
 }
 
 .magz-no {
-    font-family: "Monserrat";
+    font-family: sans-serif; /* "Monserrat"; */
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
     text-decoration: none;
 }
 
 .magz {
-    font-family: "Magz";
+    font-family: sans-serif; /*  "Magz"; */
     font-weight: 700;
-    font-style: italic;
+    font-style: normal;
     text-decoration: none;
 }
 
@@ -72,4 +72,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.legend--text-shadow {
+    text-shadow: 2px 2px 2px blue;
 }
