@@ -22,7 +22,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/sofy/images/whats-icon.png" alt="whats-app-icon" />
+            <img src="/images/whats-icon.png" alt="whats-app-icon" />
           </a>
           {/* <div className="chat-support__icon"></div> */}
         </div>

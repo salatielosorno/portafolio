@@ -10,8 +10,8 @@ export default function Document() {
         {/* <!--  Essential META Tags --> */}
         <meta property="og:title" content="Todo para tu fiesta. Piñatas, Recuerdos y Decoración" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://sofypiñatas.com/sofy/images/sofy-pinatas.png" />
-        <meta property="og:url" content="http://sofypiñatas.com" />
+        <meta property="og:image" content="http://piñatas.com/images/-pinatas.png" />
+        <meta property="og:url" content="http://piñatas.com" />
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
 
         {/* <!--  Non-Essential, But Recommended --> */}

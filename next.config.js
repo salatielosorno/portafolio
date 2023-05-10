@@ -15,7 +15,7 @@
   images: {
     unoptimized: true
   },
-  basePath:'/sofy'
+  distDir: 'docs'
 };
  
 module.exports = nextConfig;

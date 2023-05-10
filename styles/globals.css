@@ -4,24 +4,24 @@
 
 @font-face {
     font-family: 'Magz';
-    src: url('/sofy/fonts/Magz.ttf.woff') format('woff'),
-        url('/sofy/fonts/Magz.ttf.svg#Magz') format('svg'),
-        url('/sofy/fonts/Magz.ttf.eot'),
-        url('/sofy/fonts/Magz.ttf.eot?#iefix') format('embedded-opentype');
+    src: url('/fonts/Magz.ttf.woff') format('woff'),
+        url('/fonts/Magz.ttf.svg#Magz') format('svg'),
+        url('/fonts/Magz.ttf.eot'),
+        url('/fonts/Magz.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Quicksand';
-    src: url('/sofy/fonts/Quicksand-VariableFont_wght.ttf');
+    src: url('/fonts/Quicksand-VariableFont_wght.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Monserrat';
-    src: url('/sofy/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+    src: url('/fonts/Montserrat-Italic-VariableFont_wght.ttf');
     font-weight: normal;
     font-style: normal;
 }

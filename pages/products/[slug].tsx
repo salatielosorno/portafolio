@@ -4,7 +4,7 @@ import getProducts from '../../sfcc.js'
 export default function Product({ product }) {
   return <>
     <div className='flex flex-col justify-between bg-sblue'>
-      <a href='/sofy' className='text-xl p-2'>
+      <a href='/' className='text-xl p-2'>
         <span className='font-bold text-spink'>Sofy</span> <span className='text-syellow magz-no magz-second'>Piñatas</span>
       </a>
     </div>
