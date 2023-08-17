@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import img from '../public/images/sofy-pinatas-background.png'
+import logo from '../public/images/sofy-pignatas.jpeg';
 
 export default function Header({ scrollHandler }) {
   return (
@@ -19,9 +20,10 @@ export default function Header({ scrollHandler }) {
             
           </div>
           <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-            <h1 className="mt-1 text-center font-bold text-gray-800 sm:tracking-tight text-7xl lg:text-9xl">
+            {/* <h1 className="mt-1 text-center font-bold text-gray-800 sm:tracking-tight text-7xl lg:text-9xl">
               <span className='font-bold text-spink block magz magz-first'>Sofy</span> <span className='text-syellow block magz-no magz-second'>Piñatas</span>
-            </h1>
+            </h1> */}
+            <Image id='logo' width={800} src={logo} alt="Sofy Piñatas"/>
             <p className="relative left-0 right-0 mx-auto mt-5 max-w-xl text-center text-xl  font-semibold tracking-wide text-orange-600">
               <span className="block text-white legend--text-shadow">La vida es mejor con una</span>
               <span className="block text-white font-medium legend--text-shadow">piñata.</span>

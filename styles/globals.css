@@ -77,3 +77,10 @@ body {
 .legend--text-shadow {
     text-shadow: 1px 1px 5px blue;
 }
+
+img#logo {
+    border-color: plum;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+}
