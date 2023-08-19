@@ -78,9 +78,23 @@ body {
     text-shadow: 1px 1px 5px blue;
 }
 
-img#logo {
+/* img#logo {
     border-color: plum;
     border-style: solid;
     border-width: 10px;
     margin: auto;
+} */
+
+.wave, .confeti {
+    height: initial !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    inset: initial !important;
+}
+.wave {
+    bottom: 0 !important;
+}
+.confeti {
+    top: 0 !important;
 }
