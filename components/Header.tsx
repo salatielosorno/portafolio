@@ -6,16 +6,9 @@ import wave from '../public/images/wave.png'
 export default function Header({ scrollHandler }) {
   return (
     <header className="relative">
-      <div>
-        <ul>
-          <li><a href='#'>Piñatas</a></li>
-          <li><a href='#'>Piñatas</a></li>
-          <li><a href='#'>Piñatas</a></li>
-        </ul>
-      </div>
       <div className="absolute inset-x-0 bottom-0 h-1/2" />
       <div className="mx-auto">
-        <div className="relative shadow-xl sm:overflow-hidden h-screen">
+        <div className="relative shadow-xl sm:overflow-hidden h-screen mt--mobile">
           <div className="relative px-4 pt-16 sm:pb-6 sm:pt-24 lg:pt-32 lg:px-8 flex justify-center	">
             <Image id='logo' width={800} src={logo} alt="Sofy Piñatas" className='h-2/4 lg:w-3/5 xl:w-2/5' />
           </div>
