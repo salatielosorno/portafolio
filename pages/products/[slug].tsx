@@ -32,7 +32,7 @@ export default function Product({ product }) {
             <br />
             <div>
               <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
-                href={`https://api.whatsapp.com/send/?phone=5212251121397&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${product.name}.`}
+                href={`https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${product.name}.`}
                 target="_blank"
                 rel="noreferrer">Lo quiero</a>
             </div>
