@@ -4,16 +4,16 @@ export default function Footer() {
       <div className="center flex justify-center space-x-4">
         <p>* Los precios no incluye costo por envío. Pedidos con mínimo 5 días de anticipación al evento. Todos los pedidos pasan a lista de espera con el 50% de anticipo.</p>
       </div>
-      <br/>
-      <hr/>
-      <br/>
+      <br />
+      <hr />
+      <br />
       <div className="center flex justify-center space-x-4"><p>Sofy Piñatas </p>
         <span>|</span>
         <span
 
           className="font-medium text-white"
         >
-          2023
+          2023 - 2024
         </span>
         <div className="chat-support__icons">
           <a
@@ -27,9 +27,9 @@ export default function Footer() {
           {/* <div className="chat-support__icon"></div> */}
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
     </footer>
   )
 }
