@@ -10,6 +10,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        'amarillo': { DEFAULT: '#EAFB00'},
+        'rosa': { DEFAULT: '#D15187'},
         'spink': { DEFAULT: '#EE3EC9' },
         'syellow': { DEFAULT: '#FFCF74' },
         'spurple': { DEFAULT: '#AFC2E7'},

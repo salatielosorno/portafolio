@@ -6,32 +6,37 @@ function cn(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const LinkTo = ({ className, productName }) => {
+  return <a className={className}
+    href={`https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
+    target="_blank"
+    rel="noreferrer">Lo quiero</a>
+}
+
+const CardBlock = ({ src, productId, productName, productDescription, isLoading, onLoadingComplete }) => {
+  return <>
+    <div className="w-full max-w-sm bg-rosa rounded-lg shadow-2xl">
+      <a
+        href={`https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20la%20pi%C3%B1ata%20${productName}.`}
+        target="_blank"
+        rel="noreferrer">
+        <img className="rounded-t-lg" src={src} alt={productName} />
+      </a>
+      <div className="px-5 pt-5 pb-5">
+        <a href="#">
+          <h5 className="text-xl font-semibold tracking-tight text-white">{productName}</h5>
+          <p className='text-white'>{productDescription}</p>
+        </a>
+        <div className="flex items-center justify-between pt-6">
+          <LinkTo productName={productName} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer" />
+        </div>
+      </div>
+    </div>
+  </>
+}
+
 export default function ProductCard({ product }) {
   const [isLoading, setLoading] = useState(true)
 
-  return (
-    <Link href={`/products/${product.id}`} className="group">
-      <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-        <Image
-          alt={product.name}
-          src={product.imageGroups[0].images[0].link}
-          fill
-          className={cn(
-            'object-cover duration-700 ease-in-out group-hover:opacity-75	',
-            isLoading
-              ? 'scale-110 blur-2xl grayscale'
-              : 'scale-100 blur-0 grayscale-0'
-          )}
-          onLoadingComplete={() => setLoading(false)}
-        />
-      </div>
-      <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-800">
-        <h3>{product.name}</h3>
-        {/* <p>${product.price}</p> */}
-      </div>
-      <p className="mt-1 text-sm italic text-gray-500">
-        {product.shortDescription}
-      </p>
-    </Link>
-  )
+  return <CardBlock src={product.imageGroups[0].images[0].link} productId={product.id} productName={product.name} productDescription={product.shortDescription} isLoading={isLoading} onLoadingComplete={() => setLoading(false)} />
 }

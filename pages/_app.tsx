@@ -14,6 +14,10 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Sofy Piñatas</title>
+        <link rel="icon" href="images/sofy-logo.ico" />
+        <link rel="apple-touch-icon" href="images/sofy-logo.ico"></link>
+        <meta name="apple-mobile-web-app-title" content="Sofy Pignatas"></meta>
+        <meta name="application-name" content="Sofy Pignatas"></meta>
       </Head>
       {/* <!-- Google tag (gtag.js) --> */}
       <Script

@@ -1,3 +1,46 @@
+import Link from "next/link"
+
+const BuildPriceItem = ({ text }) => {
+    return <>
+        <li className="flex items-center">
+            <svg className="flex-shrink-0 w-4 h-4 text-rosa" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span className="text-base font-normal leading-tight text-gray-200 ms-3">{text}</span>
+        </li>
+    </>
+}
+
+export const PricingCard = ({ packageLink, packageItems, price, oldPrice = undefined, packageName }) => {
+    return <>
+        <div className="w-full max-w-sm p-4 border rounded-lg shadow sm:p-8 bg-gray-800 border-gray-700">
+            <h5 className="mb-4 text-xl font-medium text-gray-300">{packageName}</h5>
+            <div className="flex items-baseline text-white">
+                <span className="text-3xl font-semibold">$</span>
+                <span className="text-5xl font-extrabold tracking-tight">{price}</span>
+                <span className="ms-1 text-xl font-normal text-gray-200">mxn</span>
+            </div>
+            {
+                oldPrice &&
+                <div className="flex items-baseline text-white line-through">
+                    <span className="text-lg font-semibold">$</span>
+                    <span className="text-lg font-extrabold tracking-tight">{oldPrice}</span>
+                    <span className="ml-1 text-xl font-normal text-white">mxn</span>
+                </div>
+            }
+            <ul role="list" className="space-y-5 my-7">
+                {packageItems.map((element: any) => <BuildPriceItem text={element.text} />)}
+            </ul>
+            <a className="text-white bg-rosa cursor-pointer hover:bg-rosa focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+                target="_blank"
+                href={packageLink}
+                rel="noreferrer">Lo quiero</a>
+
+        </div>
+
+    </>
+}
+
 export default function Pinatas() {
 
     return <>
@@ -11,169 +54,10 @@ export default function Pinatas() {
         </div>
 
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
-                <h5 className="mb-4 text-xl font-medium text-white">Piñata Básica</h5>
-                <div className="flex items-baseline text-gray-800 dark:text-white">
-                    <span className="text-3xl font-semibold">$</span>
-                    <span className="text-5xl font-extrabold tracking-tight">190.00</span>
-                    <span className="ml-1 text-xl font-normal text-white">mxn</span>
-                </div>
-                {/* <!-- List --> */}
-                <ul role="list" className="space-y-5 my-7">
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Circular, 50cm diametro</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Metálica</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Imagen a elección</span>
-                    </li>
-                    {/* <li className="flex space-x-3 line-through decoration-white">
-                    
-                    <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    <span className="text-base font-normal leading-tight text-white">Sketch Files</span>
-                </li>
-                <li className="flex space-x-3 line-through decoration-white">
-                    
-                    <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    <span className="text-base font-normal leading-tight text-white">API Access</span>
-                </li>
-                <li className="flex space-x-3 line-through decoration-white">
-                    
-                    <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    <span className="text-base font-normal leading-tight text-white">Complete documentation</span>
-                </li>
-                <li className="flex space-x-3 line-through decoration-white">
-                    
-                    <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    <span className="text-base font-normal leading-tight text-white">24×7 phone & email support</span>
-                </li> */}
-                </ul>
-                <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
-                        href="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20B%C3%A1sica."
-                        target="_blank"
-                        rel="noreferrer">Lo quiero</a>
-                </div>
-            </div>
-            <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
-                <h5 className="mb-4 text-xl font-medium text-white">Piñata Chica</h5>
-                <div className="flex items-baseline text-gray-800 dark:text-white">
-                    <span className="text-3xl font-semibold">$</span>
-                    <span className="text-5xl font-extrabold tracking-tight">230.00</span>
-                    <span className="ml-1 text-xl font-normal text-white">mxn</span>
-                </div>
-                {/* <!-- List --> */}
-                <ul role="list" className="space-y-5 my-7">
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Circular, 50cm diametro</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Metálica</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Imagen a elección</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
-                    </li>
-                </ul>
-                <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
-                        href="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Chica."
-                        target="_blank"
-                        rel="noreferrer">Lo quiero</a>
-                </div>
-            </div>
-            <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
-                <h5 className="mb-4 text-xl font-medium text-white">Piñata Mediana</h5>
-                <div className="flex items-baseline text-gray-800 dark:text-white">
-                    <span className="text-3xl font-semibold">$</span>
-                    <span className="text-5xl font-extrabold tracking-tight">290.00</span>
-                    <span className="ml-1 text-xl font-normal text-white">mxn</span>
-                </div>
-                {/* <!-- List --> */}
-                <ul role="list" className="space-y-5 my-7">
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Circular, 80cm diametro</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Metálica</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Imagen a elección</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
-                    </li>
-                </ul>
-                <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
-                        href="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Mediana."
-                        target="_blank"
-                        rel="noreferrer">Lo quiero</a>
-                </div>
-            </div>
-            <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-spurple-2 dark:border-spurple-2">
-                <h5 className="mb-4 text-xl font-medium text-white">Piñata Jumbo</h5>
-                <div className="flex items-baseline text-gray-800 dark:text-white">
-                    <span className="text-3xl font-semibold">$</span>
-                    <span className="text-5xl font-extrabold tracking-tight">560.00</span>
-                    <span className="ml-1 text-xl font-normal text-white">mxn</span>
-                </div>
-                {/* <!-- List --> */}
-                <ul role="list" className="space-y-5 my-7">
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Circular, 1m. diametro</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Metálica</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Imagen a elección</span>
-                    </li>
-                    <li className="flex space-x-3">
-                        {/* <!-- Icon --> */}
-                        <svg aria-hidden="true" className="flex-shrink-0 w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Check icon</title><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                        <span className="text-base font-normal leading-tight text-white">Foamy o papel</span>
-                    </li>
-                </ul>
-                <div>
-                    <a className="text-white bg-sorange hover:bg-sorange-2 focus:ring-4 focus:outline-none focus:ring-sorange-2 dark:focus:ring-sorange-2 font-medium rounded-lg text-base px-5 py-2.5 inline-flex justify-center w-full text-center"
-                        href="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Jumbo."
-                        target="_blank"
-                        rel="noreferrer">Lo quiero</a>
-                </div>
-            </div>
+            <PricingCard packageName="Piñata Básica" price="189.99" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }]} packageLink="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20B%C3%A1sica." />
+            <PricingCard packageName="Piñata Chica" price="229.99" packageItems={[{ text: "Circular, 50cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Chica." />
+            <PricingCard packageName="Piñata Mediana" price="289.99" packageItems={[{ text: "Circular, 80cm diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Mediana." />
+            <PricingCard packageName="Piñata Jumbo" price="559.99" packageItems={[{ text: "Circular, 1m. diametro" }, { text: "Metálica" }, { text: "Imagen a elección" }, { text: "Foamy o papel" }]} packageLink="https://api.whatsapp.com/send/?phone=5212251107907&text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20Pi%C3%B1ata%20Jumbo." />
         </div >
     </>
 }

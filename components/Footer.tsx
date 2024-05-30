@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-5 bg-spurple p-4 text-white text-xs" style={{ 'position': 'relative' }}>
+    <footer className="mt-5 bg-blue-700 p-4 text-white text-xs" style={{ 'position': 'relative' }}>
       <div className="center flex justify-center space-x-4">
         <p>* Los precios no incluye costo por envío. Pedidos con mínimo 5 días de anticipación al evento. Todos los pedidos pasan a lista de espera con el 50% de anticipo.</p>
       </div>
