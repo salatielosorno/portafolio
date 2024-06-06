@@ -97,7 +97,7 @@ html {
     inset: initial !important;
 }
 .wave {
-    bottom: 0 !important;
+    bottom: -160px !important;
 }
 .confeti {
     top: 0 !important;
@@ -135,8 +135,16 @@ html {
     .wrapper .movil {
       display: block;
     }
+    .wave {
+      bottom: 0 !important;
+    }
     .mt--mobile{
       margin-top: -70px;
+    }
+  }
+  @media (max-width: 1023px) {
+    .wave {
+      bottom: 0 !important;
     }
   }
   .wrapper .movil .bar-icon {
